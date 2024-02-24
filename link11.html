@@ -15,48 +15,49 @@
 			<div class="main__category">
 				<article class="article__item">
 					<h2 class="article__title title-article">
-						Модуль “Динамічний адаптив”
+						Модуль «Динамический адаптив»
 					</h2>
 					<p>
-						Під час роботи над адаптивом сайту, нам постійно доводиться змінювати зовнішній вигляд об’єкта. У
-						деяких випадках нам необхідно змінити порядок елементів, коли при певній роздільній здатності екрана
-						деякий блок повинен перебувати в іншому місці структури. Особливо часто це потрібно при адаптації
-						шапки сайту, коли необхідно перенести блок з контактами у меню-бургер.
+						Во время работы над адаптивом сайта, нам то и дело приходится изменять внешний вид объекта. В некоторых случаях нам необходимо
+						изменить порядок элементов, когда при определенном разрешении экрана некоторый блок должен находится в совершенно другом месте
+						структуры. Особенно часто это требуется при адаптации шапки сайта когда необходимо перенести блок с контактами в меню-бургер.
 					</p>
 					<p>
-						Функціонал динамічного адаптива переміщає необхідний блок (на певному розширенні екрану) до іншого
-						блоку. Переміщення відображається у розмітці HTML.
+						Функционал динамического адаптива перемещает необходимый блок (на определенном разрешении) в другой блок. Перемещение
+						отображается в разметке HTML.
 					</p>
 
 					<div class="article__body body-article">
-						<h3>Підключення функціоналу</h3>
-						<p>[JS] У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import
+						<h3>Подключение функционала</h3>
+						<p>[JS] В файле <strong>js/app.js</strong> раскомментировать строку <strong>import
 								&#8220;./libs/dynamic_adapt.js&#8221;</strong>
 						</p>
 
-						<h3>Використання функціоналу</h3>
+						<h3>Использование функционала</h3>
 						<p>
-							[HTML] До блоку який потрібно перемістити додаємо атрибут <strong>data-da</strong> зі значеннями
-							атрибуту вказаними нижче:
+							[HTML] В блок который нужно переместить добавляем атрибут <strong>data-da</strong> со значениями атрибута указанными
+							ниже:
 						</p>
 						<div class="wp-block-image">
-							<figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="1024"
-									height="530"
-									src="img/10.jpg"
-									alt="" class="wp-image-2002"
+							<!-- <figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="1024" height="530"
+									src="img/10.jpg" alt="" class="wp-image-2002"
 									srcset="https://template.fls.guru/wp-content/uploads/2022/11/dynamic-adapt-3-1024x530-2.jpg 1024w, https://template.fls.guru/wp-content/uploads/2022/11/dynamic-adapt-3-1024x530-2-300x155.jpg 300w, https://template.fls.guru/wp-content/uploads/2022/11/dynamic-adapt-3-1024x530-2-768x398.jpg 768w, https://template.fls.guru/wp-content/uploads/2022/11/dynamic-adapt-3-1024x530-2-250x129.jpg 250w"
 									sizes="(max-width: 1024px) 100vw, 1024px" />
-							</figure>
+							</figure> -->
+							<iframe width="1024" height="530" src="https://www.youtube.com/embed/QKuMr575vlQ?si=xyDbbIysJQ9tvbmx"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen>
+							</iframe>
 						</div>
 
-						<h3>Розташування та додаткові дані</h3>
+						<h3>Расположение и дополнительные данные</h3>
 						<p>
-							Функціонал знаходиться у <strong>js/libs/dynamic_adapt.js</strong>. Назва функціі
-							<strong>DynamicAdapt(type)</strong>.
+							Функционал находится в <strong>js/libs/dynamic_adapt.js</strong>. Название функции <strong>DynamicAdapt(type)</strong>.
 						</p>
 						<p>
-							Модуль має обмеження, наприклад, якщо перекидати кілька об&#8217;єктів одночасно в один і той же
-							блок, може виникнути плутанина з порядком блоків.
+							У модуля есть ограничения, например, если перекидывать несколько объектов одновременно в один и тот же блок, может
+							возникнуть путаница с порядком блоков.
 						</p>
 					</div>
 				</article>

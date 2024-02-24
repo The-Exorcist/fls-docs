@@ -15,46 +15,48 @@
 			<div class="main__category">
 				<article class="article__item">
 					<h2 class="article__title title-article">
-						Модуль “Ліниве підвантаження” (Lazy Loading)
+						Модуль «Ленивая подгрузка» (Lazy Loading)
 					</h2>
 					<p>
-						Модуль “Ліниве підвантаження” дозволяє підвантажувати зображення, а також вміст тегів iframe video
-						audio тільки при доскролюванні до елемента. Це значно підвищує швидкість завантаження сторінки.
+						Модуль «Ленивая подгрузка» позволяет подгружать изображения, а также содержимое тегов iframe video audio только при
+						доскролливании к элементу. Это существенно повышает скорость загрузки страницы.
 					</p>
 
 					<div class="article__body body-article">
 
-						<h3>Підключення функціоналу</h3>
+						<h3>Подключение функционала</h3>
 						<p>
-							<strong>[HTML]</strong> Для підключення картинки з лінивим підвантаженням, у потрібному місці слід
-							викликати <a rel="noreferrer noopener" href="link2.html#snippets" target="_blank">сніпет</a> <strong>imgl</strong>, що виведе тег &lt;img> але замість атрибуту src буде атрибут data-src.
+							<strong>[HTML]</strong> Для подключения картинки с ленивой подгрузкой, в нужном месте следует вызвать <a
+								rel="noreferrer noopener" href="link2.html#snippets" target="_blank">сниппет</a> <strong>imgl</strong>, что выведет
+							тег &lt;img> но вместо атрибута src будет атрибу data-src.
 						</p>
 						<p>
-							При виведенні інших тегів (iframe video audio) також слід замінити src data-src.
+							При выводе других тегов (iframe video audio) также следует заменить src на data-src.
 						</p>
 						<img src="img/Screenshot_63.png" alt="">
 						<blockquote>
-							Під час режиму продакшн система розпізнає data-src і змінить для підключаного webp-файлу атрибут на data-srcset
+							Во время режима продакшн, система распознает data-src и изменит для подключаемого webp-файла атрибут на data-srcset
 						</blockquote>
 						<p>
-							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import &#8216;./files/scroll/lazyload.js&#8217;;</strong>
+							<strong>[JS]</strong> В файле <strong>js/app.js</strong> раскомментировать строку <strong>import
+								&#8216;./files/scroll/lazyload.js&#8217;;</strong>
 						</p>
 
-						<h3>Робота функціоналу</h3>
+						<h3>Работа функционала</h3>
 						<p>
-							У момент доскролювання до об&#8217;єкта з атрибутом data-src або data-srcset модуль підвантажить дані (перемістить підключення до атрибуту src/srcset), а також додасть до об&#8217;єкта клас <strong>_lazy-loaded </strong>та атрибут data-ll-status зі значенням loaded
+							В момент доскроливания до объекта с атрибутом data-src либо data-srcset модуль подгрузит данные (переместит подключение в
+							атрибут src/srcset), а также добавит к объекту класс <strong>_lazy-loaded</strong> и атрибут data-ll-status со значением
+							loaded
 						</p>
 						<img src="img/Screenshot_64.png" alt="">
 
-						<h3>Розташування та додаткові дані</h3>
+						<h3>Расположение и дополнительные данные</h3>
 						<p>
-							Модуль працює на основі плагіну <strong>vanilla-lazyload.js. </strong> Підключення та налаштування плагіна знаходиться у <strong>js/files/scroll/lazyload.js</strong>. Для більш тонких налаштувань читайте <a href="https://github.com/verlok/vanilla-lazyload" target="_blank" rel="noreferrer noopener">повну документацію плагіну</a>.
+							Модуль работает на основе плагина <strong>vanilla-lazyload.js.</strong> Подключение и настройки плагина находится в
+							<strong>js/files/scroll/lazyload.js</strong>. Для более тонких настроек читайте
+							<a href="https://github.com/verlok/vanilla-lazyload" target="_blank" rel="noreferrer noopener">полную документацию
+								плагина.</a>
 						</p>
-
-
-
-
-
 					</div>
 				</article>
 			</div>
