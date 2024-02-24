@@ -15,93 +15,109 @@
 			<div class="main__category">
 				<article class="article__item">
 					<h2 class="article__title title-article">
-						Модуль “Popup”. Випливаючі (модальні) вікна
+						Модуль «Рopup». Всплывающие (модальные) окна
 					</h2>
 					<p>
-						Цей функціонал додає можливість використовувати випливаючі вікна. Робота модуля полягає в наступному: користувач натискає на вказаний елемент (за замовчюванням це атрибут із вказаним селектором <strong>data-popup=’selector’)</strong>. При цьому до тега <strong>body</strong> додається клас <strong>popup-show</strong>. Також блокується прокручування сторінки (можна вимкнути), фокусування елементів “перелітає” на popup, із запам’ятовуванням попереднього сфокусованого елемента на сторінці. Закриття popup відбувається при натисканні кнопки закриття (за замовчуванням елемент з атрибутом <strong>data-close</strong>), по кліку на “порожньому місці” (не на popup), за натисканням кнопки <strong>ESC</strong>.
+						Данный функционал добавляет возможность использовать всплывающие окна. Работа модуля заключается в следующем: пользователь
+						нажимает на указанный элемент (по умолчанию это атрибут с указанным селектором <strong>data-popup=’selector’)</strong>. При
+						этом к тегу <strong>body</strong> добавляется класс <strong>popup-show</strong>. Также блокируется прокрутка страницы (можно
+						отключить), фокусировка элементов «перелетает» на popup, с запоминанием предыдущего сфокусированного элемента на странице.
+						Закрытие роpup происходит при клике на кнопку закрытия (по умолчанию элемент с атрибутом <strong>data-close</strong>),
+						по клику на «пустом месте» (не на popup), понажатию кнопки <strong>ESC</strong>.
 					</p>
 
 					<div class="article__body body-article">
-						<h3>Підключення функціоналу</h3>
+						<h3>Подключение функционала</h3>
 						<ol>
 							<li>
-								<strong>[HTML]</strong> Підключити файл <strong>_popup.htm</strong>, після обгортки <strong>wrapper</strong>, у HTML-файлі сторінки <strong>@@include(‘html/_popup.htm’,{})</strong>, можна використати сніпет pop
+								<strong>[HTML]</strong> Подключить файл <strong>_popup.htm</strong>, после оболочки <strong>wrapper</strong>, в
+								HTML-файл страницы <strong>@@include(‘html/_popup.htm’,{})</strong>, можно использовать снипет pop
 							</li>
 							<li>
-								<strong>[SCSS]</strong> Підключить файл <strong>scss/base/popup.scss</strong> у файлі <strong>scss/base.scss</strong> – розкоментувати рядок <strong>@import ‘base/popup’;</strong>
+								<strong>[SCSS]</strong> Подключить файл <strong>scss/base/popup.scss</strong> в файл <strong>scss/base.scss</strong>
+								– раскомментировать строку <strong>@import ‘base/popup’;</strong>
+
+
 							</li>
 							<li>
-								<strong>[JS]</strong> Підключить файл <strong>js/libs/popup.js</strong> у файлі <strong>js/app.js</strong> – розкоментувати рядок <strong>import ‘./libs/popup.js’</strong>
+								<strong>[JS]</strong> Подключить файл <strong>js/libs/popup.js</strong> в файл <strong>js/app.js</strong> –
+								раскомментировать строку <strong>import ‘./libs/popup.js’</strong>
 							</li>
 						</ol>
 
-						<h3>Використання функціоналу</h3>
+						<h3>Использование функционала</h3>
 						<p>
-							Для того, щоб викликати попап, необхідно на сторінці ввести об’єкт з дата-атрибутом, в якому вказано селектор (клас або id) випливаючого вікна, на яке посилаємось:
+							Для того, чтобы вызвать попап, необходимо на странице ввести объект с дата-атрибутом, в котором указан селектор (класс или
+							id) всплывающего окна, на которое ссылаемся:
 						</p>
 						<img src="img/Screenshot_24.png" alt="">
 						<p>
-							Далі відкрити файл <strong>html/_popup.htm</strong>, розкоментувати HTML-код підготовки попапа, вказати селектор (id або клас), за яким викликається попап, змінити код під свої потреби.
+							Далее открыть файл <strong>html/_popup.htm</strong>, раскомментировать HTML-код подготовки попапа, указать селектор (id
+							или класс) по которому вызывается попап, изменить код под свои нужды.
 						</p>
-						<p><i>У прикладі попап викликається за id popup:</i></p>
+						<p><i>В примере попап вызывается по id popир:</i></p>
 						<img src="img/Screenshot_25.png" alt="">
 
-						<h4>Відкриття YouTube відео у попапі</h4>
+						<h4>Открытие YouTube видео в попапе</h4>
 						<p>
-							Щоб відкрити відеоролик у попапі, слід додати до кнопки, яка викликає попап, атрибут <strong>data-popup-youtube</strong>, а як значення вказати код ролика. Також слід вказати атрибут <strong>data-popup-youtube-place</strong> для об’єкта, в якому хочемо вивести ролик (якщо атрибут data-popup-youtube-place не буде вказано, ролик автоматично з’явиться в об’єкті з класом <strong>popup__text</strong>):
+							Для того чтобы открыть видеоролик в попапе, следует добавить блоку попапа атрибут <strong>data-popup-youtube</strong>,
+							a в качестве значения указать код ролика. Также следует указать атрибут <strong>data-popup-youtube-place</strong> для
+							объекта в котором хотим вывести ролик (Если атрибут data-popup-youtube-place не указан, ролик автоматически появится.
+							в объекте с классом <strong>popup__text</strong>):
 						</p>
 						<img src="img/Screenshot_26.png" alt="">
 						<img src="img/Screenshot_27.png" alt="">
 						<p>
-							Стилі попапа можна писати та змінювати у файлі <strong>scss/base/popup.scss</strong>
+							Стили попапа можно писать и изменять в файле <strong>scss/base/popup.scss</strong>
 						</p>
 
-						<h4>Відкриття попапа по хешу</h4>
+						<h4>Открытие попапа по хешу</h4>
 						<p>
-							об відкрити попап при відкритті сторінки, додаємо до адреси хеш з ім’ям селектора попапа
+							Для того чтобы открыть попап при открытии страницы, добавляем к адресу хеш с именем селектора попапа
 						</p>
 						<img src="img/Screenshot_28.png" alt="">
 
-						<h3>Методи та події</h3>
-						<h4>Методи</h4>
+						<h3>Методы и события</h3>
+						<h4>Методы</h4>
 						<p>
-							Працювати з попапом з будь-якого місця можна імпортувати змінну <strong>flsModules</strong>:
+							Работать с попапом из любого места можно импортировав переменную <strong>flsModules</strong>:
 						</p>
 						<img src="img/Screenshot_29.png" alt="">
 						<p>
-							Далі звернутися до класу popup та працювати з методом, наприклад <strong>open()</strong>
+							Далее обратится к классу роpup и работать с методом, например <strong>open()</strong>
 						</p>
 						<img src="img/Screenshot_30.png" alt="">
 						<p>
-							де <strong>#popup</strong> селектор попапа
+							где <strong>#popup</strong> селектор попапа
 						</p>
 						<blockquote>
-							<strong>Увага!</strong>
+							<strong>Внимание!</strong>
 							<p>
-								Після створення білду проєкту (режим build) константа flsModules змінюється на <strong>modules_flsModules</strong>.Тобто запит буде <strong>modules_flsModules.popup.open(‘#popup’)</strong>;
+								После создания билда проекта (режим build) константа flsModules изменяется на <strong>modules_flsModules</strong>.То
+								есть запрос будет <strong>modules_flsModules.popup.open(‘#popup’)</strong>;
 							</p>
 						</blockquote>
 
-						<h4>Події</h4>
+						<h4>События</h4>
 						<p>
-							У класі попапів існує ряд подій:
+							В классе попапов существуют ряд событий:
 						</p>
 						<ol>
 							<li>
-								<strong>beforePopupOpen</strong> – спрацює перед відкриттям попапа
+								<strong>beforePopupOpen</strong> – сработает перед открытием попапа
 							</li>
 							<li>
-								<strong>afterPopupOpen</strong> – спрацює після відкриття попапа
+								<strong>afterPopupOpen</strong> – сработает после открытия попапа
 							</li>
 							<li>
-								<strong>beforePopupClose </strong>– спрацює перед відкриттям попапа
+								<strong>beforePopupClose </strong> – сработает перед закрытием попапа
 							</li>
 							<li>
-								<strong>afterPopupClose </strong>– спрацює після відкриття попапа
+								<strong>afterPopupClose </strong>– сработает после закрытия попапа
 							</li>
 						</ol>
 						<p>
-							Щоб працювати з подією вішаємо прослуховування на document
+							Чтобы работать с событием вешаем прослушку на document
 						</p>
 						<img src="img/Screenshot_31.png" alt="">
 					</div>
